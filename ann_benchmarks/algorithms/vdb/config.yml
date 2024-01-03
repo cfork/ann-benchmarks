@@ -1,0 +1,14 @@
+float:
+  any:
+  - base_args: ['@metric', '@dimension']
+    constructor: vdb
+    disabled: false
+    docker_tag: ann-benchmarks-vdb
+    module: ann_benchmarks.algorithms.vdb
+    name: vdb
+    run_groups:
+      HNSW:
+        args:
+          M: [16]
+          efConstruction: 500
+        query_args: [[10]]
